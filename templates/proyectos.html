@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyectos - Santiago Bonacci</title>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <header class="bg-dark py-5">
+        <div class="container px-5 text-center text-white">
+            <h1 class="display-4">📊 Mis Proyectos de Análisis de Datos</h1>
+            <p class="lead">Aplicaciones prácticas en Excel, Tableau, Python y más</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- Proyecto 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">📈 Dashboard de ventas (Tableau)</h5>
+                        <p class="card-text">Dashboard interactivo que muestra el rendimiento de ventas mensuales de una tienda ficticia. Hecho para práctica en Coderhouse.</p>
+                        <a href="ENLACE_A_TABLEAU" target="_blank" class="btn btn-outline-primary">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">📊 Análisis de métricas en Excel</h5>
+                        <p class="card-text">Reporte dinámico con Power Query y gráficos, aplicado a redes sociales de una campaña política real.</p>
+                        <a href="ENLACE_A_EXCEL" target="_blank" class="btn btn-outline-primary">Descargar Excel</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">🤖 Automatización con Python</h5>
+                        <p class="card-text">Script que resume PDFs y genera posteos para redes con ayuda de IA. Aplicado a contenido académico.</p>
+                        <a href="ENLACE_A_REPO" target="_blank" class="btn btn-outline-primary">Ver código en GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">📃 Informe de comunicación estratégica</h5>
+                        <p class="card-text">Informe con datos y visualizaciones sobre posicionamiento en redes, hecho para un bloque legislativo.</p>
+                        <a href="ENLACE_AL_INFORME" target="_blank" class="btn btn-outline-primary">Ver informe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <p class="m-0">© Santiago Bonacci 2025 - Análisis & Comunicación Estratégica</p>
+        </div>
+    </footer>
+</body>
+</html>
