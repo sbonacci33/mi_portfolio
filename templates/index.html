@@ -1,206 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Mi Portfolio - Analista de Datos</title>
-        
-        <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" />
-        
-        <!-- Bootstrap icons desde CDN -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
-
-        <!-- Tu CSS desde carpeta static -->
-        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
-    </head>
-
-
-    <body>
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container px-5">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Services</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Header personalizado -->
-        <header class="bg-dark py-5">
-        <div class="container px-5">
-            <div class="row gx-5 justify-content-center">
+{% extends "base.html" %}
+{% block content %}
+<!-- Header personalizado -->
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center my-5">
-                <h1 class="display-5 fw-bolder text-white mb-2">Santiago Bonacci</h1>
-                <p class="lead text-white-50 mb-4">
-                    Estrategia, comunicación y análisis de datos.<br>
-                    Combino pensamiento crítico, narrativas visuales y herramientas digitales para crear soluciones más humanas e inteligentes.
-                </p>
-                <a class="btn btn-outline-light btn-lg px-4 me-sm-3" href="{{ url_for('static', filename='cv.pdf') }}" download>Descargar CV</a>
+                    <h1 class="display-5 fw-bolder text-white mb-2">Santiago Bonacci</h1>
+                    <p class="lead text-white-50 mb-4">
+                        Estrategia, comunicación y análisis de datos.<br>
+                        Combino pensamiento crítico, narrativas visuales y herramientas digitales para crear soluciones más humanas e inteligentes.
+                    </p>
+                    <a class="btn btn-outline-light btn-lg px-4 me-sm-3" href="{{ url_for('static', filename='cv.pdf') }}" download>Descargar CV</a>
                 </div>
             </div>
-            </div>
         </div>
-        </header>
+    </div>
+</header>
 
-        <!-- Secciones destacadas -->
-        <section class="py-5" id="resumen">
-        <div class="container px-5 my-5">
-            <div class="row gx-5">
+<!-- Secciones destacadas -->
+<section class="py-5" id="resumen">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
 
             <!-- Proyectos de análisis de datos -->
             <div class="col-lg-4 mb-5">
                 <div class="card h-100 shadow border-0">
-                <div class="card-body p-4">
-                    <h5 class="card-title">📊 Análisis de datos</h5>
-                    <p class="card-text">Proyectos con Excel, Tableau, Power BI y Python. Visualizaciones, informes, dashboards.</p>
-                    <a href="{{ url_for('proyectos') }}" class="btn btn-primary">Ver más</a>
-                </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title">📊 Análisis de datos</h5>
+                        <p class="card-text">Proyectos con Excel, Tableau, Power BI y Python. Visualizaciones, informes, dashboards.</p>
+                        <a href="{{ url_for('proyectos') }}" class="btn btn-primary">Ver más</a>
+                    </div>
                 </div>
             </div>
 
             <!-- Cuchá -->
             <div class="col-lg-4 mb-5">
                 <div class="card h-100 shadow border-0">
-                <div class="card-body p-4">
-                    <h5 class="card-title">📰 Cuchá</h5>
-                    <p class="card-text">Medio digital autogestionado. Estrategia de contenido, producción periodística y redes sociales.</p>
-                    <a href="{{ url_for('cucha') }}" class="btn btn-primary">Ver más</a>
-                </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title">📰 Cuchá</h5>
+                        <p class="card-text">Medio digital autogestionado. Estrategia de contenido, producción periodística y redes sociales.</p>
+                        <a href="{{ url_for('cucha') }}" class="btn btn-primary">Ver más</a>
+                    </div>
                 </div>
             </div>
 
             <!-- Artículos académicos -->
             <div class="col-lg-4 mb-5">
                 <div class="card h-100 shadow border-0">
-                <div class="card-body p-4">
-                    <h5 class="card-title">📚 Artículos académicos</h5>
-                    <p class="card-text">Publicaciones y ponencias sobre comunicación, cultura y medios.</p>
-                    <a href="{{ url_for('articulos') }}" class="btn btn-primary">Ver más</a>
-                </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title">📚 Artículos académicos</h5>
+                        <p class="card-text">Publicaciones y ponencias sobre comunicación, cultura y medios.</p>
+                        <a href="{{ url_for('articulos') }}" class="btn btn-primary">Ver más</a>
+                    </div>
                 </div>
             </div>
 
             <!-- Proyecto Python en Render -->
             <div class="col-lg-4 mb-5">
                 <div class="card h-100 shadow border-0">
-                <div class="card-body p-4">
-                    <h5 class="card-title">🧠 Síntesis estratégica</h5>
-                    <p class="card-text">Web creada con Python para representar visualmente mi perfil profesional.</p>
-                    <a href="{{ url_for('sintesis') }}" class="btn btn-primary">Ver más</a>
-                </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title">🧠 Síntesis estratégica</h5>
+                        <p class="card-text">Web creada con Python para representar visualmente mi perfil profesional.</p>
+                        <a href="{{ url_for('sintesis') }}" class="btn btn-primary">Ver más</a>
+                    </div>
                 </div>
             </div>
 
             <!-- Sobre mí -->
             <div class="col-lg-4 mb-5">
                 <div class="card h-100 shadow border-0">
-                <div class="card-body p-4">
-                    <h5 class="card-title">👤 Sobre mí</h5>
-                    <p class="card-text">Formación, experiencia y competencias técnicas como comunicador y analista de datos.</p>
-                    <a href="{{ url_for('sobre_mi') }}" class="btn btn-primary">Ver más</a>
-                </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title">👤 Sobre mí</h5>
+                        <p class="card-text">Formación, experiencia y competencias técnicas como comunicador y analista de datos.</p>
+                        <a href="{{ url_for('sobre_mi') }}" class="btn btn-primary">Ver más</a>
+                    </div>
                 </div>
             </div>
 
             <!-- Contacto -->
             <div class="col-lg-4 mb-5">
                 <div class="card h-100 shadow border-0">
-                <div class="card-body p-4">
-                    <h5 class="card-title">📬 Contacto</h5>
-                    <p class="card-text">¿Querés escribirme o dejar un mensaje? Usá este formulario de contacto.</p>
-                    <a href="{{ url_for('contacto') }}" class="btn btn-primary">Ir al formulario</a>
-                </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title">📬 Contacto</h5>
+                        <p class="card-text">¿Querés escribirme o dejar un mensaje? Usá este formulario de contacto.</p>
+                        <a href="{{ url_for('contacto') }}" class="btn btn-primary">Ir al formulario</a>
+                    </div>
                 </div>
             </div>
 
+        </div>
+    </div>
+</section>
+
+<!-- Logros destacados -->
+<section class="py-5 border-bottom bg-light">
+    <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder">✨ Logros destacados</h2>
+            <p class="lead mb-0">Algunos hitos que resumen mi perfil profesional</p>
+        </div>
+        <div class="row gx-5">
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">📊 Formación en Análisis de Datos</h5>
+                        <p class="card-text">Actualmente me estoy formando en Python, Excel avanzado, Tableau y Power BI, integrando estos conocimientos a mi perfil comunicacional.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🤖 Uso de IA en proyectos reales</h5>
+                        <p class="card-text">Aplico herramientas de inteligencia artificial como ChatGPT y automatizaciones para optimizar procesos de producción de contenido y análisis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">📈 Crecimiento de engagement institucional</h5>
+                        <p class="card-text">Lideré la estrategia digital de un bloque legislativo, aumentando un 35% la interacción en redes institucionales en un año.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">📰 Fundador de Cuchá</h5>
+                        <p class="card-text">Cofundé el medio digital @cucha.cba, con más de 15K seguidores en dos años, enfocándonos en narrativas sociales y jóvenes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">✍️ Más de 500 textos académicos editados</h5>
+                        <p class="card-text">Trabajo como editor y corrector académico en ciencias sociales, asegurando calidad, coherencia y claridad argumentativa.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🧠 Estratega digital con pensamiento crítico</h5>
+                        <p class="card-text">Integro saberes en comunicación, docencia e investigación con datos y tecnologías para diseñar estrategias más humanas y efectivas.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        </section>
-
-        <!-- Logros destacados -->
-        <section class="py-5 border-bottom bg-light">
-            <div class="container px-5 my-5">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bolder">✨ Logros destacados</h2>
-                    <p class="lead mb-0">Algunos hitos que resumen mi perfil profesional</p>
-                </div>
-                <div class="row gx-5">
-                    <div class="col-lg-6 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title">📊 Formación en Análisis de Datos</h5>
-                                <p class="card-text">Actualmente me estoy formando en Python, Excel avanzado, Tableau y Power BI, integrando estos conocimientos a mi perfil comunicacional.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title">🤖 Uso de IA en proyectos reales</h5>
-                                <p class="card-text">Aplico herramientas de inteligencia artificial como ChatGPT y automatizaciones para optimizar procesos de producción de contenido y análisis.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title">📈 Crecimiento de engagement institucional</h5>
-                                <p class="card-text">Lideré la estrategia digital de un bloque legislativo, aumentando un 35% la interacción en redes institucionales en un año.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title">📰 Fundador de Cuchá</h5>
-                                <p class="card-text">Cofundé el medio digital @cucha.cba, con más de 15K seguidores en dos años, enfocándonos en narrativas sociales y jóvenes.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title">✍️ Más de 500 textos académicos editados</h5>
-                                <p class="card-text">Trabajo como editor y corrector académico en ciencias sociales, asegurando calidad, coherencia y claridad argumentativa.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title">🧠 Estratega digital con pensamiento crítico</h5>
-                                <p class="card-text">Integro saberes en comunicación, docencia e investigación con datos y tecnologías para diseñar estrategias más humanas y efectivas.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container px-5">
-                <p class="m-0 text-center text-white">
-                    © Santiago Bonacci | Comunicación, Estrategia y Análisis de Datos · Córdoba, Argentina
-                    <br>
-                    <a href="mailto:santibonacci@gmail.com" class="text-white">santibonacci@gmail.com</a> · 
-                    <a href="https://www.linkedin.com/in/santi-bonacci-85b28570" class="text-white" target="_blank">LinkedIn</a>
-                </p>
-            </div>
-        </footer>
-
-    </body>
-</html>
+    </div>
+</section>
+{% endblock %}
