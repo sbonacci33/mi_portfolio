@@ -3,48 +3,69 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="description" content="Portfolio de Santiago Bonacci - Comunicación, datos y estrategia" />
+        <meta name="author" content="Santiago Bonacci" />
         <title>Mi Portfolio - Analista de Datos</title>
 
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" />
 
-        <!-- Bootstrap icons desde CDN -->
+        <!-- Bootstrap Icons -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-        <!-- Tu CSS desde carpeta static -->
+        <!-- Estilos personalizados -->
         <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
     </head>
     <body>
-        <!-- Responsive navbar-->
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container px-5">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Services</a></li>
+            <div class="container">
+                <a class="navbar-brand" href="{{ url_for('index') }}">Portfolio Profesional</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.endpoint == 'index' %}active{% endif %}" href="{{ url_for('index') }}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.endpoint == 'sobre_mi' %}active{% endif %}" href="{{ url_for('sobre_mi') }}">Sobre mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.endpoint == 'proyectos' %}active{% endif %}" href="{{ url_for('proyectos') }}">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.endpoint == 'articulos' %}active{% endif %}" href="{{ url_for('articulos') }}">Artículos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.endpoint == 'cucha' %}active{% endif %}" href="{{ url_for('cucha') }}">Cuchá</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.endpoint == 'contacto' %}active{% endif %}" href="{{ url_for('contacto') }}">Contacto</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
+        <!-- Contenido principal -->
         {% block content %}{% endblock %}
 
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
+        <!-- Footer -->
+        <footer class="py-5 bg-dark mt-5">
             <div class="container px-5">
                 <p class="m-0 text-center text-white">
-                    © Santiago Bonacci | Comunicación, Estrategia y Análisis de Datos · Córdoba, Argentina
-                    <br>
+                    © Santiago Bonacci | Comunicación, Estrategia y Análisis de Datos · Córdoba, Argentina<br>
                     <a href="mailto:santibonacci@gmail.com" class="text-white">santibonacci@gmail.com</a> ·
-                    <a href="https://www.linkedin.com/in/santi-bonacci-85b28570" class="text-white" target="_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/santi-bonacci-85b28570" target="_blank" class="text-white">LinkedIn</a>
                 </p>
             </div>
         </footer>
+
+        <!-- Bootstrap JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

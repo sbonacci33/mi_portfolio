@@ -1,7 +1,107 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container mt-5">
-    <h1>Esta es la página de [nombre de la sección]</h1>
-    <p>Próximamente más contenido.</p>
-</div>
+
+<!-- Header -->
+<header class="py-5 text-white text-center" style="background-image: url('{{ url_for('static', filename='assets/fondo6.png') }}'); background-size: cover; background-position: center;">
+    <div class="container px-5">
+        <h1 class="display-4 fw-bolder">Cuchá</h1>
+        <p class="lead mb-0">Historias, análisis y mirada crítica sobre Córdoba</p>
+    </div>
+</header>
+
+<!-- Presentación -->
+<section class="py-5">
+    <div class="container px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <p class="fs-5">
+                    <strong>Cuchá</strong> es un medio digital que cofundé junto a colegas de la comunicación, con el propósito de contar
+                    <strong>historias relevantes, invisibilizadas o necesarias</strong> para Córdoba y sus juventudes.
+                </p>
+                <p class="fs-5">
+                    Es un proyecto autogestionado que combina <strong>periodismo, análisis y sensibilidad narrativa</strong>
+                    para abordar temáticas sociales, culturales, políticas y tecnológicas desde una mirada crítica y situada.
+                </p>
+                <p class="fs-5">
+                    Además de ser cofundador, participo activamente en la producción de contenidos: escribo artículos, realizo investigaciones y creo <strong>contenidos para redes sociales y producciones audiovisuales</strong>.
+                </p>
+                <p class="fs-5">
+                    Te invito a explorar <a href="https://cucha.com.ar/" target="_blank"><strong>la web de Cuchá</strong></a> y conocer todas las notas, videos y coberturas que realizamos.
+                </p>
+            </div>
+        </div>
+
+        <!-- Enlaces sociales -->
+        <div class="text-center my-4">
+            <h5 class="fw-bold mb-3">🌐 Seguinos en redes</h5>
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+                <a href="https://www.instagram.com/cucha.cba/" class="btn btn-outline-danger" target="_blank">📸 Instagram</a>
+                <a href="https://x.com/CuchaCba" class="btn btn-outline-primary" target="_blank">🐦 Twitter</a>
+                <a href="https://www.facebook.com/CuchaCba/" class="btn btn-outline-primary" target="_blank">📘 Facebook</a>
+                <a href="https://www.tiktok.com/@cucha.cordoba?lang=es" class="btn btn-outline-dark" target="_blank">🎥 TikTok</a>
+            </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="text-center my-5">
+            <img src="{{ url_for('static', filename='assets/CUCHÁ_Logo-10.png') }}" alt="Logo de Cuchá" style="max-width: 450px;" class="img-fluid shadow rounded" />
+        </div>
+
+        <!-- Notas destacadas -->
+        <div class="mt-5">
+            <h4 class="mb-2">📝 Notas escritas por mí</h4>
+            <p class="text-muted">Algunas de las publicaciones que forman parte de mi trabajo en Cuchá, entre muchas otras producciones editoriales y audiovisuales.</p>
+
+            <div class="row gy-4">
+
+                <!-- Nota 1 -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Soberanía caminada</h5>
+                            <p class="card-text">Presencias clave en la historia de Malvinas: María “La Grande” y el Gaucho Rivero.</p>
+                            <a href="https://cucha.com.ar/soberania-caminada-maria-la-grande-y-el-gaucho-rivero-dos-presencias-clave-en-la-historia-de-malvinas/" class="btn btn-sm btn-primary" target="_blank">Leer nota</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nota 2 -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">La televisión en Córdoba</h5>
+                            <p class="card-text">Un estudio revela el alto consumo televisivo en la ciudad y el rol de las redes como fuente informativa.</p>
+                            <a href="https://cucha.com.ar/la-television-un-medio-vigente-entre-los-cordobeses/" class="btn btn-sm btn-primary" target="_blank">Leer nota</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nota 3 -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">A corazón abierto</h5>
+                            <p class="card-text">Entrevista a Julieta Cementerio: fotografía, cicatrices y cuerpos que cuentan historias.</p>
+                            <a href="https://cucha.com.ar/a-corazon-abierto-entrevista-a-la-fotografa-julieta-cementerio/" class="btn btn-sm btn-primary" target="_blank">Leer nota</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nota 4 -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">¿Qué medios consumimos?</h5>
+                            <p class="card-text">Investigación sobre hábitos mediáticos y tecnológicos de los cordobeses.</p>
+                            <a href="https://cucha.com.ar/cuales-son-los-medios-mas-consumidos-por-los-cordobeses/" class="btn btn-sm btn-primary" target="_blank">Leer nota</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
 {% endblock %}

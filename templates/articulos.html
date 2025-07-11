@@ -1,7 +1,96 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container mt-5">
-    <h1>Esta es la página de [nombre de la sección]</h1>
-    <p>Próximamente más contenido.</p>
-</div>
+
+<!-- Header con fondo -->
+<header class="py-5 text-white text-center" style="background-image: url('{{ url_for('static', filename='assets/fondo3.png') }}'); background-size: cover; background-position: center;">
+    <div class="container px-5">
+        <h1 class="display-4 fw-bolder">Artículos Académicos</h1>
+        <p class="lead mb-0">Investigación, comunicación y análisis del espacio público</p>
+    </div>
+</header>
+
+<!-- Introducción -->
+<section class="py-5">
+    <div class="container px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <p class="fs-5">
+                    Desde 2017 participo como <strong>investigador en comunicación</strong>, presentando trabajos en congresos, publicaciones académicas y libros colectivos.
+                    Mis temas de interés giran en torno a <strong>la producción de contenidos, los medios de comunicación, las prácticas culturales y el espacio público</strong>.
+                </p>
+                <p class="fs-5">
+                    En los últimos años, he comenzado a <strong>explorar los consumos digitales y las transformaciones sociotécnicas</strong> vinculadas a internet, las redes sociales y la cultura de datos.
+                </p>
+                <p class="fs-5">
+                    A continuación, comparto algunas publicaciones disponibles en línea.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Artículos -->
+<section class="py-3 bg-light">
+    <div class="container px-5">
+        <div class="row gy-4">
+
+            <!-- Artículo 1 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Procesos de subjetivación y carácter de la conflictividad laboral</h5>
+                        <p class="card-text">Análisis en medios cooperativos sobre tensiones internas/externas en el accionar laboral.</p>
+                        <a href="https://ica.bdigital.uncu.edu.ar/fichas.php?idobjeto=17036" target="_blank" class="btn btn-outline-primary">🔗 Leer artículo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artículo 2 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Investigación sobre tecnologías, trabajo e innovación</h5>
+                        <p class="card-text">Participación en proyecto sobre contranarrativas y colectivos mediáticos de Córdoba.</p>
+                        <a href="https://sociales.unc.edu.ar/sites/default/files/pogabatedaga24.pdf" target="_blank" class="btn btn-outline-primary">🔗 Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artículo 3 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">De la resistencia a la autoexplotación laboral</h5>
+                        <p class="card-text">Capítulo del libro "Dilemas de la producción", en coautoría con Nidia Abatedaga.</p>
+                        <a href="http://biblio.unvm.edu.ar/opac_css/index.php?lvl=cmspage&pageid=9&id_notice=39855" target="_blank" class="btn btn-outline-primary">🔗 Ver capítulo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artículo 4 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">El espacio público contrahegemónico</h5>
+                        <p class="card-text">Análisis sobre comunicación comunitaria y circulación de contenidos alternativos.</p>
+                        <a href="http://www.wuranga.com.ar/images/propios/36_propios_Reivindicar_el_cambio%20_ALAIC_Huvaiti_ediciones.pdf" target="_blank" class="btn btn-outline-primary">🔗 Leer publicación</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artículo 5 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Comunicación y trabajo en el espacio público</h5>
+                        <p class="card-text">Estudio desde la economía política de la comunicación en organizaciones autogestionadas.</p>
+                        <a href="https://repositoriosdigitales.mincyt.gob.ar/vufind/Record/RDUUNC_7fb375eb57532efc5955b4df0f874be2" target="_blank" class="btn btn-outline-primary">🔗 Leer investigación</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 {% endblock %}

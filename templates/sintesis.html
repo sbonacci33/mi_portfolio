@@ -1,7 +1,61 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container mt-5">
-    <h1>Esta es la página de [nombre de la sección]</h1>
-    <p>Próximamente más contenido.</p>
-</div>
+
+<header class="py-5 text-white text-center" style="background-image: url('{{ url_for('static', filename='assets/fondo3.png') }}'); background-size: cover; background-position: center;">
+    <div class="container px-5">
+        <h1 class="display-4 fw-bolder">Síntesis Estratégica</h1>
+        <p class="lead mb-0">Comunicación, datos y estrategia en un solo lugar</p>
+    </div>
+</header>
+
+<section class="py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-10">
+                <p class="fs-5">
+                    <strong>Síntesis Estratégica</strong> es un proyecto que desarrollé en el marco del curso de Python dictado por Coderhouse, en el que obtuve una calificación final de 10.
+                    El objetivo del curso era crear una aplicación web desde cero, aplicando conocimientos adquiridos en programación backend, diseño de base de datos y desarrollo con Django.
+                </p>
+
+                <!-- Logo -->
+                <div class="text-center my-4">
+                    <img src="{{ url_for('static', filename='assets/sinest.png') }}" alt="Logo de Síntesis Estratégica" style="max-width: 600px;" class="img-fluid rounded shadow" />
+                </div>
+
+                <p class="fs-5">
+                    La web funciona como una plataforma profesional desde donde presento mi perfil, formación y experiencia en comunicación digital, junto con una oferta de servicios centrados en análisis de datos de consumo y asesoría estratégica.
+                </p>
+
+                <p class="fs-5">
+                    Entre sus funcionalidades principales, incluye un portal de informes digitales con carga, edición, búsqueda y eliminación de contenidos, un sistema de suscripción con validación, y proyecciones de evolución como autenticación de usuarios, paginación, comentarios, y hasta el uso de inteligencia artificial.
+                </p>
+
+                <p class="fs-5">
+                    Utilicé <strong>Django</strong> como framework de desarrollo, diseñando y programando la web de forma autónoma. Todo el proyecto fue desplegado en la nube usando la plataforma <strong>Render</strong>, lo que permite accederlo online desde cualquier dispositivo.
+                </p>
+
+                <p class="fs-5">
+                    Esta página representa la síntesis entre mi formación en comunicación, mi interés por el análisis de datos y mis capacidades técnicas para construir soluciones digitales útiles, claras y bien diseñadas.
+                </p>
+
+                <!-- Imagen trabajo -->
+                <div class="text-center my-4">
+                    <img src="{{ url_for('static', filename='assets/trabajo10.png') }}" alt="Imagen de trabajo" style="max-width: 600px;" class="img-fluid rounded shadow" />
+                </div>
+
+                <!-- Certificado -->
+                <div class="text-center my-5">
+                    <h4 class="mb-3">📜 Certificación obtenida</h4>
+                    <img src="{{ url_for('static', filename='assets/Certificado Python.png') }}" alt="Certificado de Python" style="max-width: 500px;" class="img-fluid rounded shadow" />
+                </div>
+
+                <!-- Enlace al sitio -->
+                <div class="text-center mt-4">
+                    <a href="https://sintesisestrategica.onrender.com" target="_blank" class="btn btn-primary btn-lg">🌐 Visitar sitio web</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

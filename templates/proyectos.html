@@ -1,57 +1,99 @@
 {% extends "base.html" %}
 {% block content %}
-<header class="bg-dark py-5">
-    <div class="container px-5 text-center text-white">
-        <h1 class="display-4">📊 Mis Proyectos de Análisis de Datos</h1>
-        <p class="lead">Aplicaciones prácticas en Excel, Tableau, Python y más</p>
+
+<!-- Header con fondo -->
+<header class="py-5 text-white text-center" style="background-image: url('{{ url_for('static', filename='assets/fondo7.png') }}'); background-size: cover; background-position: center;">
+    <div class="container px-5">
+        <h1 class="display-4 fw-bolder">Proyectos de Análisis de Datos</h1>
+        <p class="lead mb-0">Aplicaciones reales con Excel, Python, visualización y estrategia</p>
     </div>
 </header>
 
-<main class="container my-5">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        <!-- Proyecto 1 -->
-        <div class="col">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">📈 Dashboard de ventas (Tableau)</h5>
-                    <p class="card-text">Dashboard interactivo que muestra el rendimiento de ventas mensuales de una tienda ficticia. Hecho para práctica en Coderhouse.</p>
-                    <a href="ENLACE_A_TABLEAU" target="_blank" class="btn btn-outline-primary">Ver proyecto</a>
-                </div>
-            </div>
-        </div>
+<!-- Sección de proyectos -->
+<section class="py-5 bg-light">
+    <div class="container px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
 
-        <!-- Proyecto 2 -->
-        <div class="col">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">📊 Análisis de métricas en Excel</h5>
-                    <p class="card-text">Reporte dinámico con Power Query y gráficos, aplicado a redes sociales de una campaña política real.</p>
-                    <a href="ENLACE_A_EXCEL" target="_blank" class="btn btn-outline-primary">Descargar Excel</a>
-                </div>
-            </div>
-        </div>
+                <!-- Proyecto Excel avanzado -->
+                <div class="card mb-5 shadow rounded border-0">
+                    <div class="card-body">
+                        <h4 class="card-title mb-3">Análisis Avanzado en Excel – Proyecto Final</h4>
+                        <p>
+                            Este proyecto fue desarrollado como trabajo final del curso de <strong>Excel Avanzado</strong> de Coderhouse.
+                            Consiste en el diseño de un dashboard interactivo que permite filtrar, explorar y tomar decisiones basadas en métricas reales.
+                        </p>
 
-        <!-- Proyecto 3 -->
-        <div class="col">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">🤖 Automatización con Python</h5>
-                    <p class="card-text">Script que resume PDFs y genera posteos para redes con ayuda de IA. Aplicado a contenido académico.</p>
-                    <a href="ENLACE_A_REPO" target="_blank" class="btn btn-outline-primary">Ver código en GitHub</a>
-                </div>
-            </div>
-        </div>
+                        <ul>
+                            <li>📌 Limpieza automática de datos con Power Query</li>
+                            <li>📊 Segmentaciones dinámicas y visualizaciones por categoría</li>
+                            <li>📈 Dashboard con filtros interactivos</li>
+                            <li>⏱️ Análisis temporal por franja horaria y tipo de contenido</li>
+                        </ul>
 
-        <!-- Proyecto 4 -->
-        <div class="col">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">📃 Informe de comunicación estratégica</h5>
-                    <p class="card-text">Informe con datos y visualizaciones sobre posicionamiento en redes, hecho para un bloque legislativo.</p>
-                    <a href="ENLACE_AL_INFORME" target="_blank" class="btn btn-outline-primary">Ver informe</a>
+                        <p class="mt-4"><strong>Resumen (Brief del Proyecto):</strong></p>
+                        <ul class="small">
+                            <li><strong>Objetivo:</strong> Evaluar el rendimiento del contenido, detectar patrones y crear un dashboard estratégico.</li>
+                            <li><strong>Metodología:</strong> Datos de Meta Business Suite procesados con Power Query y visualizados en Excel.</li>
+                            <li><strong>Preguntas clave:</strong> ¿Qué formatos rinden más? ¿Qué días y horarios son más efectivos? ¿Qué temáticas generan más interacción?</li>
+                        </ul>
+
+                        <a href="{{ url_for('static', filename='docs/ProyectoFinal_Bonacci_Santiago.xlsx') }}" target="_blank" class="btn btn-outline-primary mt-3">📥 Descargar Excel</a>
+                    </div>
                 </div>
+
+                <!-- Informe PDF -->
+                <div class="card mb-5 shadow rounded border-0">
+                    <div class="card-body">
+                        <h4 class="card-title mb-3">Informe Estratégico sobre Rendimiento en Instagram</h4>
+                        <p>
+                            Este informe fue elaborado por <strong>Síntesis Estratégica</strong> y analiza el desempeño del perfil de <code>@cucha.cba</code>
+                            entre julio 2023 y junio 2025, en base a métricas clave como alcance, engagement, tipos de contenido y horarios de publicación.
+                        </p>
+                        <ul>
+                            <li>📌 Comparativa de rendimiento trimestral</li>
+                            <li>📊 Indicadores estratégicos por categoría y formato</li>
+                            <li>🧭 Recomendaciones editoriales para próximos trimestres</li>
+                        </ul>
+
+                        <a href="{{ url_for('static', filename='docs/Métricas Cuchá 23-25.pdf') }}" target="_blank" class="btn btn-outline-primary mt-3">📄 Descargar Informe PDF</a>
+                    </div>
+                </div>
+
+                <!-- Proyecto automatización -->
+                <div class="card mb-5 shadow rounded border-0">
+                    <div class="card-body">
+                        <h4 class="card-title mb-3">Automatización con Python + IA</h4>
+                        <p>
+                            Script que automatiza el resumen de PDFs académicos y genera contenidos para redes sociales con asistencia de Inteligencia Artificial.
+                            Fue diseñado para acelerar tareas de divulgación y producción editorial.
+                        </p>
+                        <ul>
+                            <li>📎 Procesamiento y lectura de PDFs</li>
+                            <li>🧠 Integración con modelos de lenguaje para resumen</li>
+                            <li>📲 Generación de copies para redes</li>
+                        </ul>
+
+                        <a href="https://github.com/sbonacci33/TuPrimeraPagina-Bonacci" target="_blank" class="btn btn-outline-primary mt-3">🔗 Ver código en GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Proyecto Django -->
+                <div class="card mb-4 shadow rounded border-0">
+                    <div class="card-body">
+                        <h4 class="card-title mb-3">Síntesis Estratégica — Proyecto Web con Django</h4>
+                        <p>
+                            <strong>Síntesis Estratégica</strong> es una plataforma web creada íntegramente con Python y Django,
+                            que integra análisis de datos, comunicación digital y narrativa estratégica. Este sitio funciona como portafolio profesional y servicio de consultoría.
+                        </p>
+
+                        <a href="https://sintesisestrategica.onrender.com/" target="_blank" class="btn btn-outline-primary mt-3">🌐 Visitar sitio web</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-</main>
+</section>
+
 {% endblock %}

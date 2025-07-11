@@ -1,7 +1,46 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container mt-5">
-    <h1>Esta es la página de [nombre de la sección]</h1>
-    <p>Próximamente más contenido.</p>
-</div>
+
+<!-- Encabezado con fondo -->
+<header class="py-5 text-white" style="background-image: url('{{ url_for('static', filename='assets/fondo2.png') }}'); background-size: cover; background-position: center;">
+    <div class="container px-5 text-center">
+        <h1 class="display-4 fw-bold">Información de contacto</h1>
+        <p class="lead">¿Querés escribirme, consultarme o conectar profesionalmente?</p>
+    </div>
+</header>
+
+<!-- Sección de contacto -->
+<section class="py-5 bg-light">
+    <div class="container px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title text-center mb-4">📬 Contacto directo</h5>
+                        <ul class="list-unstyled fs-5">
+                            <li class="mb-3">
+                                <strong>📞 Teléfono:</strong> <br>
+                                <a href="https://wa.me/5493513523722" target="_blank" class="text-decoration-none">+54 9 351 352-3722</a>
+                            </li>
+                            <li class="mb-3">
+                                <strong>📧 Correo electrónico:</strong> <br>
+                                <a href="mailto:sbonacci89@gmail.com" class="text-decoration-none">sbonacci89@gmail.com</a>
+                            </li>
+                            <li class="mb-3">
+                                <strong>🔗 LinkedIn:</strong> <br>
+                                <a href="https://www.linkedin.com/in/santi-bonacci-85b28570" target="_blank" class="text-decoration-none">/in/santi-bonacci</a>
+                            </li>
+                            <li>
+                                <strong>📷 Instagram:</strong> <br>
+                                <a href="https://www.instagram.com/santibonacci/" target="_blank" class="text-decoration-none">@santibonacci</a>
+                            </li>
+                        </ul>
+                        <p class="text-center mt-4">Estoy disponible para colaborar, asesorar o simplemente charlar sobre ideas 🚀</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

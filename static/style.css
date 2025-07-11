@@ -1,0 +1,70 @@
+/* Estilo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Efecto hover para tarjetas */
+.card {
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Fondo con opacidad en tarjetas con imagen */
+.card-body {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+}
+
+/* Botón personalizado */
+.btn-primary {
+    background-color: #2c3e50;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+/* Encabezados */
+h1, h2, h5 {
+    font-weight: bold;
+}
+
+/* Animación de aparición (fade-in) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar animación a secciones */
+section, .card {
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Mejor estética para párrafos introductorios */
+section.bg-light p.lead {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Responsive ajustes adicionales */
+@media (max-width: 768px) {
+    .card:hover {
+        transform: none;
+    }
+}
