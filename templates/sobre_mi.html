@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<header class="bg-primary py-5 text-white">
+<header class="py-5 text-white" style="background: url('{{ url_for('static', filename='assets/fondo8.png') }}') center center / cover no-repeat;">
     <div class="container px-5 text-center">
         <h1 class="display-4 fw-bolder">Sobre mí</h1>
         <p class="lead">Un recorrido personal y profesional</p>
@@ -12,26 +12,44 @@
     <div class="container px-5">
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-8">
-                <p class="lead">Soy <strong>Santiago Bonacci</strong>. Nací en Río Cuarto, Córdoba, Argentina, en 1989. Me formé en Comunicación Social en la Universidad Nacional de Córdoba y, desde entonces, fui construyendo un perfil profesional que combina análisis, estrategia y producción de conocimiento.</p>
+                <p class="lead">
+                    Soy <strong>Santiago Bonacci</strong>. Nací en Río Cuarto, Córdoba, Argentina, en 1989. Me formé en Comunicación Social en la Universidad Nacional de Córdoba y, desde entonces, fui construyendo un perfil profesional que combina análisis, estrategia y producción de conocimiento. Actualmente vivo en la ciudad de Córdoba capital.
+                </p>
 
                 <div class="text-center my-4">
                     <img src="{{ url_for('static', filename='assets/sobremi.jpeg') }}"
-                        alt="Santiago Bonacci"
-                        class="img-fluid rounded shadow"
-                        style="max-width: 500px;">
+                         alt="Santiago Bonacci"
+                         class="img-fluid rounded shadow"
+                         style="max-width: 500px;">
                 </div>
 
-                <p>Con el tiempo, el desarrollo de las tecnologías digitales y mi curiosidad por comprender el mundo me llevaron a explorar nuevas herramientas. Así comencé a integrar el análisis de datos a mi trabajo en comunicación, apostando por una mirada que combina técnica y sentido estratégico.</p>
+                <p>
+                    Con el tiempo, el desarrollo de las tecnologías digitales y mi curiosidad por comprender el mundo me llevaron a explorar nuevas herramientas. Así comencé a integrar el análisis de datos a mi trabajo en comunicación, apostando por una mirada que combina técnica y sentido estratégico.
+                </p>
 
-                <p>Me considero metódico y responsable, pero también abierto a innovar: la inteligencia artificial, por ejemplo, me resulta esencial para optimizar procesos y ampliar posibilidades creativas y analíticas.</p>
+                <p>
+                    Me considero metódico y responsable, pero también abierto a innovar: la inteligencia artificial, por ejemplo, me resulta esencial para optimizar procesos y ampliar posibilidades creativas y analíticas.
+                </p>
 
-                <p>Disfruto especialmente de los proyectos que abordan la comunicación digital: análisis de redes, métricas, consumos culturales y tecnologías. Aporto capacidad de síntesis, pensamiento estratégico y sensibilidad social para interpretar lo que los datos dicen —y lo que callan—.</p>
+                <p>
+                    Disfruto especialmente de los proyectos que abordan la comunicación digital: análisis de redes, métricas, consumos culturales y tecnologías. Aporto capacidad de síntesis, pensamiento estratégico y sensibilidad social para interpretar lo que los datos dicen —y lo que callan—.
+                </p>
 
-                <p>Mi recorrido incluye experiencias en docencia, medios, gestión institucional y edición académica. Coordinar equipos, investigar y enseñar me permitió fortalecer una visión integral del conocimiento y la importancia de hacerlo accesible.</p>
+                <p>
+                    Mi recorrido incluye experiencias en docencia, medios, gestión institucional y edición académica. Coordinar equipos, investigar y enseñar me permitió fortalecer una visión integral del conocimiento y la importancia de hacerlo accesible.
+                </p>
 
-                <p>Actualmente me estoy formando como analista de datos, combinando Python, Excel avanzado, Tableau y Power BI, con el objetivo de convertirme en consultor especializado en comunicación estratégica y análisis digital.</p>
+                <p>
+                    Actualmente me estoy formando como analista de datos, combinando Python, Excel avanzado, Tableau y Power BI, con el objetivo de convertirme en consultor especializado en comunicación estratégica y análisis digital.
+                </p>
 
-                <p>Más allá del trabajo, me apasionan los desafíos personales, el aprendizaje continuo y la posibilidad de conocer distintas realidades y formas de ver el mundo.</p>
+                <p>
+                    Además de mis trabajos en medios y espacios institucionales, doy clases en la Facultad de Ciencias de la Comunicación (UNC) como docente e investigador. Allí también desarrollé una formación de posgrado en ciencias sociales y participo activamente en proyectos académicos y editoriales.
+                </p>
+
+                <p>
+                    Si querés conocer más sobre mi recorrido profesional, formación, competencias técnicas y experiencias, podés consultar el <a href="{{ url_for('static', filename='docs/Currículum 2025.pdf') }}" target="_blank"><strong>CV completo</strong></a> que elaboré en base a estos proyectos, trabajos y aprendizajes.
+                </p>
             </div>
         </div>
     </div>
