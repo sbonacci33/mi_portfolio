@@ -39,15 +39,24 @@
                 </p>
 
                 <!-- Imagen trabajo -->
-                <div class="text-center my-4">
-                    <img src="{{ url_for('static', filename='assets/trabajo10.png') }}" alt="Imagen de trabajo" class="img-fluid img-mod responsive-img" style="max-width: 600px;" />
+                <div class="d-flex justify-content-center my-4">
+                    <img src="{{ url_for('static', filename='assets/trabajo10.png') }}"
+                        alt="Imagen de trabajo"
+                        class="img-fluid rounded shadow"
+                        style="max-width: 100%; height: auto; max-width: 600px;" />
                 </div>
 
                 <!-- Certificado -->
                 <div class="text-center my-5">
                     <h4 class="mb-3">📜 Certificación obtenida</h4>
-                    <img src="{{ url_for('static', filename='assets/Certificado Python.png') }}" alt="Certificado de Python" class="img-fluid img-mod responsive-img" style="max-width: 500px;" />
+                    <div class="d-flex justify-content-center">
+                        <img src="{{ url_for('static', filename='assets/Certificado Python.png') }}"
+                            alt="Certificado de Python"
+                            class="img-fluid rounded shadow"
+                            style="max-width: 100%; height: auto; max-width: 500px;" />
+                    </div>
                 </div>
+
 
                 <!-- Enlace al sitio -->
                 <div class="text-center mt-4">
