@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="py-5 text-white text-center" style="background-image: url('{{ url_for('static', filename='assets/fondo9.png') }}'); background-size: cover; background-position: center;">
+    <div class="container px-5">
+        <h1 class="display-4 fw-bolder">Currículum Vitae</h1>
+        <p class="lead mb-0">Resumen profesional y académico</p>
+    </div>
+</header>
+
+<section class="py-5">
+    <div class="container px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <h2 class="fw-bold">Santiago Bonacci</h2>
+                <p class="mb-1">📍 Córdoba Capital, Argentina</p>
+                <p class="mb-1">📧 santibonacci@gmail.com | sbonacci89@gmail.com</p>
+                <p class="mb-4">📱 +54 9 351 352-3722</p>
+
+                <h5 class="fw-bold">Perfil Profesional</h5>
+                <p>Licenciado en Comunicación Social con orientación audiovisual, en continua formación en herramientas de análisis de datos y teorías sociales contemporáneas. Me desempeño como asesor en comunicación institucional en la Legislatura de Córdoba y soy docente en nivel medio y universitario. Cofundador de un medio digital cooperativo y corrector-editor de textos académicos, combino experiencia en redacción, oratoria y edición con un creciente dominio técnico de herramientas digitales e inteligencia artificial.</p>
+                <p>Mi trayectoria profesional y académica se centra en la comunicación pública, la docencia crítica, la producción editorial y la investigación social, con un perfil versátil, actualizado y comprometido.</p>
+
+                <h5 class="fw-bold mt-4">Formación Académica</h5>
+                <ul>
+                    <li>Licenciatura en Comunicación Social (orientación en comunicación audiovisual) - UNC, 2007-2013</li>
+                    <li>Formación en Teoría Social y Antropología - UNC</li>
+                    <li>Curso de Python – Coderhouse (52 hs) – 2025</li>
+                    <li>Curso de Excel – Coderhouse (20 hs) – 2025</li>
+                    <li>Diplomatura en Data Analytics – En curso, Mundo E</li>
+                </ul>
+
+                <h5 class="fw-bold mt-4">Experiencia Profesional</h5>
+                <ul>
+                    <li><strong>Asesor en Comunicación – Legislatura de Córdoba (2024 – Actualidad)</strong>: desarrollo de estrategias comunicacionales, gestión de redes y coordinación de equipos.</li>
+                    <li><strong>Editor y periodista – Cuchá (2022 – Actualidad)</strong>: fundador y productor de contenidos para el medio digital cooperativo.</li>
+                    <li><strong>Corrector y editor de textos académicos – Escribimos.com (2022 – Actualidad)</strong>.</li>
+                    <li><strong>Docente de Comunicación – Nivel medio y universitario (2015 – Actualidad)</strong>.</li>
+                    <li><strong>Community Manager – MKE Marketing Digital (2014 – 2015)</strong>.</li>
+                </ul>
+
+                <h5 class="fw-bold mt-4">Experiencia Académica</h5>
+                <ul>
+                    <li>Dirección y evaluación de tesis de grado en la Lic. en Comunicación Social – UNC.</li>
+                    <li>Integrante de proyectos de investigación acreditados por UNC y SECTyP.</li>
+                    <li>Publicaciones en libros y revistas académicas sobre comunicación, trabajo y cultura.</li>
+                    <li>Expositor y coordinador en congresos nacionales e internacionales.</li>
+                </ul>
+
+                <h5 class="fw-bold mt-4">Competencias Técnicas</h5>
+                <p>Data & análisis: Python (básico-intermedio), Excel, Tableau, Power BI.<br>
+                Edición multimedia: Adobe Photoshop, Premiere, Audition.<br>
+                Comunicación digital: redacción profesional, manejo avanzado de redes sociales, oratoria.<br>
+                Docencia e investigación: metodología cualitativa, didáctica crítica.<br>
+                IA aplicada: herramientas de inteligencia artificial para automatización de tareas y análisis de datos.</p>
+
+                <div class="text-center mt-5">
+                    <a class="btn btn-primary" href="{{ url_for('static', filename='docs/Currículum 2025.pdf') }}" download>Descargar CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
