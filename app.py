@@ -7,9 +7,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/proyectos')
-def proyectos():
-    return render_template('proyectos.html')
+@app.route('/trabajos')
+def trabajos():
+    return render_template('trabajos.html')
 
 @app.route('/cucha')
 def cucha():
@@ -30,6 +30,10 @@ def sobre_mi():
 @app.route('/contacto')
 def contacto():
     return render_template('contacto.html')
+
+@app.route('/cv')
+def cv():
+    return render_template('cv.html')
 
 # Context processor para usar `request.endpoint` en templates
 @app.context_processor

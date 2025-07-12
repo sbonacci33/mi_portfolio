@@ -38,14 +38,17 @@
                         <li class="nav-item">
                             <a class="nav-link {% if request.endpoint == 'sobre_mi' %}active{% endif %}" href="{{ url_for('sobre_mi') }}">Sobre mí</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.endpoint == 'proyectos' %}active{% endif %}" href="{{ url_for('proyectos') }}">Proyectos</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle {% if request.endpoint in ['cucha','trabajos','sintesis','articulos'] %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trabajos</a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="{{ url_for('cucha') }}">Cuchá</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('trabajos') }}">Trabajos</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('sintesis') }}">Síntesis Estratégica</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('articulos') }}">Artículos Académicos</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.endpoint == 'articulos' %}active{% endif %}" href="{{ url_for('articulos') }}">Artículos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.endpoint == 'cucha' %}active{% endif %}" href="{{ url_for('cucha') }}">Cuchá</a>
+                            <a class="nav-link {% if request.endpoint == 'cv' %}active{% endif %}" href="{{ url_for('cv') }}">CV</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.endpoint == 'contacto' %}active{% endif %}" href="{{ url_for('contacto') }}">Contacto</a>
