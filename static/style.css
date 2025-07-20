@@ -50,23 +50,6 @@ h1, h2, h5 {
     font-weight: bold;
 }
 
-/* Animación de aparición (fade-in) */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Aplicar animación a secciones */
-/* Se elimina la animación de aparición en secciones y tarjetas */
-section, .card {
-    /* animation: fadeInUp 0.8s ease-in-out; */
-}
 
 /* Mejor estética para párrafos introductorios */
 section.bg-light p.lead {
@@ -81,19 +64,6 @@ section.bg-light p.lead {
     }
 }
 
-/* Animación fade-in */
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /* Estilo para imágenes responsivas y modernas */
 .img-mod {
