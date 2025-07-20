@@ -19,7 +19,8 @@ body {
 
 /* Fondo con opacidad en tarjetas con imagen */
 .card-body {
-    background-color: rgba(255, 255, 255, 0.9);
+    /* Se aumenta la transparencia general de las tarjetas */
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(6px);
 }
 
@@ -62,8 +63,9 @@ h1, h2, h5 {
 }
 
 /* Aplicar animación a secciones */
+/* Se elimina la animación de aparición en secciones y tarjetas */
 section, .card {
-    animation: fadeInUp 0.8s ease-in-out;
+    /* animation: fadeInUp 0.8s ease-in-out; */
 }
 
 /* Mejor estética para párrafos introductorios */
