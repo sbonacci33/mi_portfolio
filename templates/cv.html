@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<header class="py-5 text-white text-center" style="background-image: url('{{ url_for('static', filename='assets/fondo10.png') }}'); background-size: cover; background-position: center;">
+<header class="page-header text-white text-center" style="background-image: url('{{ url_for('static', filename='assets/fondo10.png') }}');">
     <div class="container px-5">
         <h1 class="display-4 fw-bolder">Currículum Vitae</h1>
         <p class="lead mb-0">Resumen profesional y académico</p>
@@ -58,6 +58,12 @@
                 Comunicación digital: redacción profesional, manejo avanzado de redes sociales, oratoria.<br>
                 Docencia e investigación: metodología cualitativa, didáctica crítica.<br>
                 IA aplicada: herramientas de inteligencia artificial para automatización de tareas y análisis de datos.</p>
+
+                <h5 class="fw-bold mt-4">Dashboard en Tableau</h5>
+                <p class="mb-3">Ejemplo de visualización interactiva elaborada durante mi formación.</p>
+                <div class="ratio ratio-16x9 mb-4">
+                    <iframe src="https://public.tableau.com/views/RegionalSampleWorkbook/Flights?:showVizHome=no" allowfullscreen></iframe>
+                </div>
 
                 <div class="text-center mt-5">
                     <a class="btn btn-primary" href="{{ url_for('static', filename='docs/Currículum 2025.pdf') }}" download>Descargar CV</a>
