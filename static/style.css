@@ -1,12 +1,17 @@
 /* Estilo general */
 body {
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
+}
+
+/* Tipografía para títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
 /* Efecto hover para tarjetas */
 .card {
-    transition: all 0.3s ease-in-out;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -14,6 +19,7 @@ body {
 
 .card:hover {
     transform: translateY(-6px) scale(1.01);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -45,9 +51,11 @@ body {
     color: #fff;
 }
 
-/* Encabezados */
-h1, h2, h5 {
-    font-weight: bold;
+/* Estilo general para encabezados con imagen */
+.page-header {
+    padding: 6rem 0;
+    background-size: cover;
+    background-position: center;
 }
 
 
