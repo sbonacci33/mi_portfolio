@@ -36,23 +36,23 @@
                             <a class="nav-link {% if request.endpoint == 'index' %}active{% endif %}" href="{{ url_for('index') }}">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {% if request.endpoint in ['sobre_mi','cv'] %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre mí</a>
+                            <a class="nav-link dropdown-toggle {% if request.endpoint == 'render_page' and request.view_args.get('page') in ['sobre_mi','cv'] %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre mí</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="{{ url_for('sobre_mi') }}">Mi trayectoria</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('cv') }}">Mi CV</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('render_page', page='sobre_mi') }}">Mi trayectoria</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('render_page', page='cv') }}">Mi CV</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {% if request.endpoint in ['cucha','trabajos','sintesis','articulos'] %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
+                            <a class="nav-link dropdown-toggle {% if request.endpoint == 'render_page' and request.view_args.get('page') in ['cucha','trabajos','sintesis','articulos'] %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="{{ url_for('cucha') }}">Cuchá</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('trabajos') }}">Trabajos</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('sintesis') }}">Síntesis Estratégica</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('articulos') }}">Artículos Académicos</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('render_page', page='cucha') }}">Cuchá</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('render_page', page='trabajos') }}">Trabajos</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('render_page', page='sintesis') }}">Síntesis Estratégica</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('render_page', page='articulos') }}">Artículos Académicos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.endpoint == 'contacto' %}active{% endif %}" href="{{ url_for('contacto') }}">Contacto</a>
+                            <a class="nav-link {% if request.endpoint == 'render_page' and request.view_args.get('page') == 'contacto' %}active{% endif %}" href="{{ url_for('render_page', page='contacto') }}">Contacto</a>
                         </li>
                     </ul>
                 </div>

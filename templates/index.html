@@ -67,7 +67,7 @@
                     <div class="card-body p-4">
                         <h5 class="card-title text-dark">{{ item.titulo }}</h5>
                         <p class="card-text text-dark">{{ item.texto }}</p>
-                        <a href="{{ url_for(item.url) }}" class="btn btn-primary">Ver más</a>
+                        <a href="{{ url_for('render_page', page=item.url) }}" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
