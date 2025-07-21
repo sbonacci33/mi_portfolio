@@ -5,7 +5,7 @@
     <div class="container px-5 text-center">
         <h1 class="display-4 fw-bolder">Sobre mí</h1>
         <p class="lead">Un recorrido personal y profesional</p>
-        <a class="btn btn-primary mt-3" href="{{ url_for('cv') }}">Ver CV completo</a>
+        <a class="btn btn-primary mt-3" href="{{ url_for('render_page', page='cv') }}">Ver CV completo</a>
     </div>
 </header>
 
@@ -53,7 +53,7 @@
                 </p>
 
                 <p>
-                    Si querés conocer más sobre mi recorrido profesional, formación, competencias técnicas y experiencias, podés consultar el <a href="{{ url_for('cv') }}"><strong>CV completo</strong></a> que elaboré en base a estos proyectos, trabajos y aprendizajes.
+                Si querés conocer más sobre mi recorrido profesional, formación, competencias técnicas y experiencias, podés consultar el <a href="{{ url_for('render_page', page='cv') }}"><strong>CV completo</strong></a> que elaboré en base a estos proyectos, trabajos y aprendizajes.
                 </p>
             </div>
         </div>
