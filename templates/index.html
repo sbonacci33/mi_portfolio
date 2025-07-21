@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <!-- Header personalizado -->
-<header class="py-5" style="background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('{{ url_for('static', filename='assets/fondo1.png') }}') center center / cover no-repeat;">
+<header class="py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('{{ url_for('static', filename='assets/fondo1.png') }}') center center / cover no-repeat;">
+
     <div class="container px-5">
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-8">
@@ -39,7 +40,7 @@
 
 <!-- Secciones destacadas con fondo -->
 <section class="py-5" id="resumen"
-         style="background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('{{ url_for('static', filename='assets/fondo10.png') }}') center center / cover no-repeat;">
+         style="background: url('{{ url_for('static', filename='assets/fondo10.png') }}') center center / cover no-repeat; background-blend-mode: normal; filter: none;">
     <div class="container px-5 my-5">
         <div class="row gx-5 justify-content-center mb-5">
             <div class="col-lg-8 text-center">
@@ -49,7 +50,7 @@
                 </p>
             </div>
         </div>
-
+        
         <div class="row gx-5">
             {% set secciones = [
                 {'titulo': '📊 Análisis de datos', 'texto': 'Trabajos con Excel, Tableau, Power BI y Python. Visualizaciones, informes, dashboards.', 'url': 'trabajos'},
