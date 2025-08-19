@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <!-- Header personalizado -->
-<header class="py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('{{ url_for('static', filename='assets/fondo1.png') }}') center center / cover no-repeat;">
+<header class="py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('{{ url_for('static', filename='assets/fondo3.png') }}') center center / cover no-repeat;">
 
     <div class="container px-5">
         <div class="row gx-5 justify-content-center">
@@ -9,8 +9,8 @@
                 <div class="text-center my-5">
                     <h1 class="display-5 fw-bolder text-white mb-2">Santiago Bonacci</h1>
                     <p class="lead text-white-50 mb-4">
-                        Estrategia, comunicación y análisis de datos.<br>
-                        Combino pensamiento crítico, narrativas visuales y herramientas digitales para crear soluciones más humanas e inteligentes.
+                        <strong>Analista de Datos en Comunicación Digital y Estrategia de Contenidos</strong><br>
+                        Profesional de la comunicación orientado al análisis de datos, con experiencia en métricas de redes sociales, reporting y <strong>SEO</strong>. Integro herramientas como <strong>Excel</strong>, <strong>Power BI</strong>, <strong>Tableau</strong>, <strong>Python</strong> y <strong>SQL</strong> con una mirada estratégica capaz de traducir información compleja en diagnósticos accionables.
                     </p>
                     <div class="d-flex justify-content-center gap-3">
                         <a class="btn btn-outline-light" href="https://www.linkedin.com/in/santi-bonacci-85b28570" target="_blank">
@@ -31,9 +31,37 @@
     <div class="container px-5">
         <div class="text-center">
             <p class="lead mb-0">
-                Bienvenido a mi portfolio profesional. En este sitio podés explorar mis trabajos de análisis de datos, producciones periodísticas, artículos académicos y desarrollos con herramientas digitales. <br>
-                Te invito a recorrer cada sección para conocer mi trabajo, leer contenidos destacados y descubrir cómo combino comunicación y tecnología en distintos contextos profesionales.
+                Soy comunicador social especializado en análisis de datos y estrategia digital. Combino la experiencia en comunicación y gestión de contenidos con herramientas avanzadas de análisis aplicadas a métricas de redes sociales, <strong>SEO</strong> y reporting. Mi diferencial está en traducir datos en diagnósticos accionables que orientan la toma de decisiones estratégicas. Actualmente profundizo en <strong>SEO</strong>, <strong>visualización de datos (Looker Studio)</strong>, <strong>metodologías ágiles</strong> y <strong>aplicaciones de IA</strong> al marketing digital para consolidar un perfil híbrido entre comunicación y datos.
             </p>
+        </div>
+    </div>
+</section>
+
+<!-- Trabajos más recientes -->
+<section class="py-5">
+    <div class="container px-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder">Mis producciones más recientes</h2>
+        </div>
+        <div class="row gx-5">
+            {% for trabajo in trabajos_recientes %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ trabajo.titulo }}</h5>
+                        <p class="card-text">{{ trabajo.descripcion }}</p>
+                        {% if trabajo.externo %}
+                        <a href="{{ trabajo.link }}" target="_blank" class="btn btn-primary">Ver trabajo</a>
+                        {% else %}
+                        <a href="{{ url_for('static', filename=trabajo.link) }}" target="_blank" class="btn btn-primary">Ver trabajo</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('render_page', page='trabajos') }}" class="btn btn-outline-primary">Ver más</a>
         </div>
     </div>
 </section>
