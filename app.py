@@ -34,7 +34,7 @@ TRABAJOS = [
     {
         "titulo": "Informe Estratégico sobre Rendimiento en Instagram",
         "descripcion": "Informe de métricas clave y recomendaciones.",
-        "link": "docs/Métricas Cuchá 23-25.pdf",
+        "link": "docs/Informe Metricas Instagram Junio 2023 - Julio 2025.pdf",
         "externo": False,
         "fecha": datetime(2025, 7, 15),
     },
