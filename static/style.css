@@ -94,8 +94,23 @@ section.bg-light p.lead {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Soporte para videos verticales */
-.ratio-9x16 {
-    --bs-aspect-ratio: 177.78%;
+/* Ratio vertical correcto y iframes ajustados */
+.ratio-9x16 { --bs-aspect-ratio: calc(16 / 9 * 100%); }  /* 9:16 */
+
+.video-grid .card-body { padding-top: .5rem; padding-bottom: .5rem; }  /* menos padding */
+.video-grid .card { /* no forzar alturas iguales */
+  height: auto !important;
+}
+.video-grid iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Si el iframe no respeta la altura del .ratio, forzar aspect-ratio directamente */
+.video-grid .no-ratio {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  height: auto;
 }
 
