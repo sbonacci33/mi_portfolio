@@ -18,32 +18,39 @@ PAGES = {
 # Lista de trabajos para mostrar automáticamente los más recientes
 TRABAJOS = [
     {
-        "titulo": "Análisis Avanzado en Excel – Proyecto Final",
-        "descripcion": "Dashboard interactivo sobre contenido y métricas.",
-        "link": "docs/ProyectoFinal_Bonacci_Santiago.xlsx",
+        "titulo": "Informe de Métricas de Instagram – T2 2025",
+        "descripcion": "Diagnóstico del segundo trimestre 2025 comparado con siete previos.",
+        "link": "docs/Informe Metricas T2 Cucha.pdf",
         "externo": False,
-        "fecha": datetime(2025, 3, 1),
+        "fecha": datetime(2025, 8, 15),
+    },
+    {
+        "titulo": "Dashboard de Rendimiento de Contenidos en Tableau",
+        "descripcion": "Evaluación de publicaciones por formato, temática y horario.",
+        "link": "https://public.tableau.com/app/profile/santiago.bonacci/viz/EntregaFinalSantiagoBonacci/Inicio",
+        "externo": True,
+        "fecha": datetime(2025, 8, 1),
     },
     {
         "titulo": "Informe Estratégico sobre Rendimiento en Instagram",
         "descripcion": "Informe de métricas clave y recomendaciones.",
         "link": "docs/Métricas Cuchá 23-25.pdf",
         "externo": False,
-        "fecha": datetime(2025, 2, 15),
+        "fecha": datetime(2025, 7, 15),
     },
     {
         "titulo": "Automatización con Python + IA",
         "descripcion": "Script que resume PDFs y genera copies para redes.",
         "link": "https://github.com/sbonacci33/TuPrimeraPagina-Bonacci",
         "externo": True,
-        "fecha": datetime(2025, 1, 10),
+        "fecha": datetime(2025, 6, 15),
     },
     {
-        "titulo": "Síntesis Estratégica — Proyecto Web con Django",
-        "descripcion": "Plataforma web que integra análisis y comunicación.",
-        "link": "https://sintesisestrategica.onrender.com/",
-        "externo": True,
-        "fecha": datetime(2024, 12, 1),
+        "titulo": "Análisis Avanzado en Excel – Proyecto Final",
+        "descripcion": "Dashboard interactivo sobre contenido y métricas.",
+        "link": "docs/ProyectoFinal_Bonacci_Santiago.xlsx",
+        "externo": False,
+        "fecha": datetime(2025, 6, 1),
     },
 ]
 

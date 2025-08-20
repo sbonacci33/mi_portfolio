@@ -43,10 +43,10 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {% if request.endpoint == 'render_page' and request.view_args.get('page') in ['cucha','trabajos','sintesis','articulos'] %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
+                            <a class="nav-link dropdown-toggle {% if request.endpoint == 'render_page' and request.view_args.get('page') in ['cucha','trabajos','sintesis','articulos'] %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trabajos</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
                                 <li><a class="dropdown-item" href="{{ url_for('render_page', page='cucha') }}">Cuchá</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('render_page', page='trabajos') }}">Trabajos</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('render_page', page='trabajos') }}">Análisis de datos</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('render_page', page='sintesis') }}">Síntesis Estratégica</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('render_page', page='articulos') }}">Artículos Académicos</a></li>
                             </ul>
