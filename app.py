@@ -20,7 +20,7 @@ TRABAJOS = [
     {
         "titulo": "Informe de Métricas de Instagram – T2 2025",
         "descripcion": "Diagnóstico del segundo trimestre 2025 comparado con siete previos.",
-        "link": "docs/Informe Metricas T2 Cucha.pdf",
+        "link": "docs/INFORME MÉTRICAS T2 CUCHÁ.pdf",
         "externo": False,
         "fecha": datetime(2025, 8, 15),
     },
