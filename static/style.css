@@ -94,29 +94,10 @@ section.bg-light p.lead {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* --- Fix espaciado embeds verticales --- */
-.ratio-9x16 {                /* alto proporcional para 9:16 */
-  --bs-aspect-ratio: calc(16 / 9 * 100%);
-}
-.video-grid .card {          /* que la card se ajuste al contenido */
-  height: auto !important;
-}
-.video-grid .card-body {     /* menos padding debajo del iframe */
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-.video-grid .ratio {         /* reduce separación visual */
-  margin-bottom: .25rem;
-}
-.video-grid iframe {         /* el iframe ocupa todo el contenedor ratio */
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.video-grid .no-ratio {      /* iframe sin contenedor ratio */
-  aspect-ratio: 9 / 16;
-  width: 100%;
-  height: auto;
-  display: block;
-}
+/* Fix espaciado en embeds de video */
+.video-grid .card { height: auto !important; }
+.video-grid .card-body { padding-top: .5rem; padding-bottom: .5rem; }
+.video-grid .ratio { margin-bottom: .25rem; }
+/* 9:16 real para Bootstrap */
+.ratio-9x16 { --bs-aspect-ratio: calc(16 / 9 * 100%); }
 
