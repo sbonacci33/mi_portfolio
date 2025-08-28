@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Portfolio de Santiago Bonacci - Comunicación, datos y estrategia" />
         <meta name="author" content="Santiago Bonacci" />
         <title>Mi Portfolio - Analista de Datos</title>
 
@@ -19,6 +18,20 @@
         <!-- Estilos personalizados -->
         <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
         <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+
+        <!-- SEO básico -->
+        <meta name="description" content="Portfolio de Santiago Bonacci: análisis de datos en comunicación digital, métricas, SEO y reporting.">
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Santiago Bonacci – Analista de Datos en Comunicación Digital">
+        <meta property="og:description" content="Comunicación + datos: métricas, SEO y reporting para decisiones en entornos digitales.">
+        <meta property="og:image" content="{{ url_for('static', filename='assets/fondo3.png', _external=True) }}">
+        <meta property="og:url" content="{{ request.url_root }}">
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Santiago Bonacci – Analista de Datos en Comunicación Digital">
+        <meta name="twitter:description" content="Comunicación + datos: métricas, SEO y reporting para decisiones en entornos digitales.">
+        <meta name="twitter:image" content="{{ url_for('static', filename='assets/fondo3.png', _external=True) }}">
     </head>
     <body>
         <!-- Navbar -->

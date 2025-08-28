@@ -71,6 +71,11 @@ def render_page(page: str):
 def inject_request():
     return dict(request=request)
 
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("404.html"), 404
+
 # Ejecución de la app
 if __name__ == '__main__':
     app.run(debug=True)
