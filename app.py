@@ -1,8 +1,10 @@
 from datetime import datetime
+import os
 
 from flask import Flask, render_template, request, abort
 
 app = Flask(__name__)
+app.config['GA4_ID'] = os.environ.get('GA4_ID')  # ej. "G-XXXXXXXXXX" o None
 
 PAGES = {
     'trabajos',
@@ -70,6 +72,11 @@ def render_page(page: str):
 @app.context_processor
 def inject_request():
     return dict(request=request)
+
+
+@app.context_processor
+def inject_ga4():
+    return {'GA4_ID': app.config.get('GA4_ID')}
 
 
 @app.errorhandler(404)
