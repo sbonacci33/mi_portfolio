@@ -68,6 +68,23 @@ def render_page(page: str):
         return render_template(f"{page}.html")
     abort(404)
 
+
+@app.route("/trabajos/analisis/balance-tiktok-instagram")
+def balance_tiktok_instagram():
+    description = (
+        "Análisis del período noviembre 2024 – octubre 2025 de cuenta, donde se evalúan las principales métricas y características "
+        "de seguidores para balance, síntesis y nueva estrategia digital."
+    )
+    return render_template(
+        "trabajos/analisis/balance-tiktok-instagram.html",
+        page_title="Resumen de Informe anual de TikTok e Instagram | Santiago Bonacci",
+        page_description=description,
+        og_title="Resumen de Informe anual de TikTok e Instagram",
+        og_description=description,
+        twitter_title="Resumen de Informe anual de TikTok e Instagram",
+        twitter_description=description,
+    )
+
 # Context processor para usar `request.endpoint` en templates
 @app.context_processor
 def inject_request():

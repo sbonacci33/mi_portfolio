@@ -7,18 +7,14 @@
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center my-5">
-                    <h1 class="display-5 fw-bolder text-white mb-2">Santiago Bonacci</h1>
-                    <p class="lead text-white-50 mb-4">
-                        <strong>Analista de Datos en Comunicación Digital y Estrategia de Contenidos</strong><br>
-                        Profesional de la comunicación orientado al análisis de datos, con experiencia en métricas de redes sociales, reporting y <strong>SEO</strong>. Integro herramientas como <strong>Excel</strong>, <strong>Power BI</strong>, <strong>Tableau</strong>, <strong>Python</strong> y <strong>SQL</strong> con una mirada estratégica capaz de traducir información compleja en diagnósticos accionables.
-                    </p>
+                    <h1 class="display-5 fw-bolder text-white mb-3">Santiago Bonacci</h1>
+                    <h2 class="h4 text-white-50 mb-4">Consultoría estratégica en comunicación · Comunicación política, datos y estrategia digital</h2>
+                    <p class="lead text-white-50 mb-3">Profesional formado y con experiencia en comunicación digital y política. Sé escribir, editar, analizar, dirigir y explicar; ese conocimiento lo pongo en juego en cada trabajo y proyecto.</p>
+                    <p class="lead text-white-50 mb-3">Mi foco es la consultoría estratégica en comunicación: transformar datos en decisiones y decisiones en impacto, con planes claros, prioridades realistas y resultados medibles.</p>
+                    <p class="lead text-white-50 mb-4">Que la comunicación sea resultado de un plan estratégico.</p>
                     <div class="d-flex justify-content-center gap-3">
-                        <a class="btn btn-outline-light" href="https://www.linkedin.com/in/santiago-bonacci-85b28570/" target="_blank">
-                            <i class="bi bi-linkedin"></i> LinkedIn
-                        </a>
-                        <a class="btn btn-primary" href="{{ url_for('static', filename='docs/Currículum 2025.pdf') }}" download>
-                            <i class="bi bi-download"></i> Descargar CV
-                        </a>
+                        <a class="btn btn-primary" href="{{ url_for('render_page', page='contacto') }}#contacto">Trabajemos juntos</a>
+                        <a class="btn btn-outline-light" href="{{ url_for('static', filename='docs/Currículum 2025.pdf') }}" download>Descargar CV</a>
                     </div>
                 </div>
             </div>
