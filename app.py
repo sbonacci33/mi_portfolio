@@ -22,10 +22,10 @@ TRABAJOS = [
     {
         "titulo": "Resumen de Informe anual de TikTok e Instagram",
         "descripcion": "Balance del período noviembre 2024 – octubre 2025 con métricas y aprendizajes clave.",
-        "link": None,
-        "endpoint": "balance_tiktok_instagram",
+        "link": "docs/Balance anual TikTok Instagram.pdf",
+        "endpoint": None,
         "externo": False,
-        "fecha": datetime(2025, 10, 31),
+        "fecha": datetime(2025, 11, 30),
     },
     {
         "titulo": "Informe de Métricas de Instagram – T2 2025",
