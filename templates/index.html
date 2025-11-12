@@ -46,7 +46,9 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ trabajo.titulo }}</h5>
                         <p class="card-text">{{ trabajo.descripcion }}</p>
-                        {% if trabajo.externo %}
+                        {% if trabajo.endpoint %}
+                        <a href="{{ url_for(trabajo.endpoint) }}" class="btn btn-primary">Ver trabajo</a>
+                        {% elif trabajo.externo %}
                         <a href="{{ trabajo.link }}" target="_blank" class="btn btn-primary">Ver trabajo</a>
                         {% else %}
                         <a href="{{ url_for('static', filename=trabajo.link) }}" target="_blank" class="btn btn-primary">Ver trabajo</a>
