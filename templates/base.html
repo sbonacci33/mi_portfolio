@@ -15,7 +15,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="author" content="Santiago Bonacci" />
-        <title>Mi Portfolio - Analista de Datos</title>
+        <title>{{ page_title|default('Mi Portfolio - Analista de Datos') }}</title>
 
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" />
@@ -23,6 +23,7 @@
         <!-- Bootstrap Icons -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
+        <link rel="preload" href="/static/fonts/NeueMontreal-Regular.woff2" as="font" type="font/woff2" crossorigin>
         <!-- Fuente Google -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -31,17 +32,17 @@
         <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
 
         <!-- SEO básico -->
-        <meta name="description" content="Portfolio de Santiago Bonacci: análisis de datos en comunicación digital, métricas, SEO y reporting.">
+        <meta name="description" content="{{ page_description|default('Portfolio de Santiago Bonacci: análisis de datos en comunicación digital, métricas, SEO y reporting.') }}">
         <!-- Open Graph -->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Santiago Bonacci – Analista de Datos en Comunicación Digital">
-        <meta property="og:description" content="Comunicación + datos: métricas, SEO y reporting para decisiones en entornos digitales.">
+        <meta property="og:title" content="{{ og_title|default('Santiago Bonacci – Analista de Datos en Comunicación Digital') }}">
+        <meta property="og:description" content="{{ og_description|default('Comunicación + datos: métricas, SEO y reporting para decisiones en entornos digitales.') }}">
         <meta property="og:image" content="{{ url_for('static', filename='assets/fondo3.png', _external=True) }}">
         <meta property="og:url" content="{{ request.url_root }}">
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Santiago Bonacci – Analista de Datos en Comunicación Digital">
-        <meta name="twitter:description" content="Comunicación + datos: métricas, SEO y reporting para decisiones en entornos digitales.">
+        <meta name="twitter:title" content="{{ twitter_title|default(og_title|default('Santiago Bonacci – Analista de Datos en Comunicación Digital')) }}">
+        <meta name="twitter:description" content="{{ twitter_description|default(og_description|default('Comunicación + datos: métricas, SEO y reporting para decisiones en entornos digitales.')) }}">
         <meta name="twitter:image" content="{{ url_for('static', filename='assets/fondo3.png', _external=True) }}">
     </head>
     <body>
