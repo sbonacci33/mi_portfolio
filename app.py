@@ -1,7 +1,20 @@
+"""Aplicación Flask para el portafolio de Santiago Bonacci."""
+
 from datetime import datetime
 import os
+from typing import Iterable, TypedDict
 
 from flask import Flask, render_template, request, abort
+
+
+class Trabajo(TypedDict):
+    titulo: str
+    descripcion: str
+    link: str
+    endpoint: str | None
+    externo: bool
+    fecha: datetime
+
 
 app = Flask(__name__)
 app.config['GA4_ID'] = os.environ.get('GA4_ID')  # ej. "G-XXXXXXXXXX" o None
@@ -17,8 +30,14 @@ PAGES = {
 }
 
 
+BALANCE_TIKTOK_DESCRIPTION = (
+    "Análisis del período noviembre 2024 – octubre 2025 de cuenta, donde se evalúan las principales métricas y características "
+    "de seguidores para balance, síntesis y nueva estrategia digital."
+)
+
+
 # Lista de trabajos para mostrar automáticamente los más recientes
-TRABAJOS = [
+TRABAJOS: list[Trabajo] = [
     {
         "titulo": "Resumen de Informe anual de TikTok e Instagram",
         "descripcion": "Balance del período noviembre 2024 – octubre 2025 con métricas y aprendizajes clave.",
@@ -70,10 +89,20 @@ TRABAJOS = [
 ]
 
 
+def _ordenar_trabajos(trabajos: Iterable[Trabajo]) -> list[Trabajo]:
+    """Devuelve los trabajos ordenados por fecha descendente."""
+
+    return sorted(trabajos, key=lambda trabajo: trabajo["fecha"], reverse=True)
+
+
+TRABAJOS_ORDENADOS = _ordenar_trabajos(TRABAJOS)
+
+
 @app.route('/')
 def index():
-    trabajos_recientes = sorted(TRABAJOS, key=lambda x: x["fecha"], reverse=True)[:3]
+    trabajos_recientes = TRABAJOS_ORDENADOS[:3]
     return render_template('index.html', trabajos_recientes=trabajos_recientes)
+
 
 @app.route('/<page>')
 def render_page(page: str):
@@ -84,34 +113,30 @@ def render_page(page: str):
 
 @app.route("/trabajos/analisis/balance-tiktok-instagram")
 def balance_tiktok_instagram():
-    description = (
-        "Análisis del período noviembre 2024 – octubre 2025 de cuenta, donde se evalúan las principales métricas y características "
-        "de seguidores para balance, síntesis y nueva estrategia digital."
-    )
     return render_template(
         "trabajos/analisis/balance-tiktok-instagram.html",
         page_title="Resumen de Informe anual de TikTok e Instagram | Santiago Bonacci",
-        page_description=description,
+        page_description=BALANCE_TIKTOK_DESCRIPTION,
         og_title="Resumen de Informe anual de TikTok e Instagram",
-        og_description=description,
+        og_description=BALANCE_TIKTOK_DESCRIPTION,
         twitter_title="Resumen de Informe anual de TikTok e Instagram",
-        twitter_description=description,
+        twitter_description=BALANCE_TIKTOK_DESCRIPTION,
     )
 
-# Context processor para usar `request.endpoint` en templates
-@app.context_processor
-def inject_request():
-    return dict(request=request)
 
-
+# Context processors
 @app.context_processor
-def inject_ga4():
-    return {'GA4_ID': app.config.get('GA4_ID')}
+def inject_globals():
+    return {
+        "request": request,
+        "GA4_ID": app.config.get("GA4_ID"),
+    }
 
 
 @app.errorhandler(404)
 def not_found(e):
     return render_template("404.html"), 404
+
 
 # Ejecución de la app
 if __name__ == '__main__':
