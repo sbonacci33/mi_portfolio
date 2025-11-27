@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <!-- Header personalizado -->
-<header class="py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('{{ url_for('static', filename='assets/fondos_3.png') }}') center center / cover no-repeat;">
+<header class="py-5 header-bg-1">
 
     <div class="container px-5">
         <div class="row gx-5 justify-content-center">
@@ -65,8 +65,7 @@
 </section>
 
 <!-- Secciones destacadas con fondo -->
-<section class="py-4" id="resumen"
-         style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('{{ url_for('static', filename='assets/fondos_5.png') }}') center center / cover no-repeat;">
+<section class="py-4 section-bg-2 text-white" id="resumen">
     <div class="container px-5 py-4">
         <div class="row gx-4 justify-content-center mb-4">
             <div class="col-lg-8 text-center">

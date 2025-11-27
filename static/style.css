@@ -48,6 +48,21 @@ h1, h2, h5 {
     font-weight: bold;
 }
 
+.header-bg-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url('/static/assets/fondos_1.png') center center / cover no-repeat;
+}
+
+.header-bg-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url('/static/assets/fondos_2.png') center center / cover no-repeat;
+}
+
+.section-bg-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url('/static/assets/fondos_2.png') center center / cover no-repeat;
+}
+
 
 /* Mejor estética para párrafos introductorios */
 section.bg-light p.lead {
