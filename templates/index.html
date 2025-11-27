@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <!-- Header personalizado -->
-<header class="py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('{{ url_for('static', filename='assets/fondo3.png') }}') center center / cover no-repeat;">
+<header class="py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('{{ url_for('static', filename='assets/fondos_3.png') }}') center center / cover no-repeat;">
 
     <div class="container px-5">
         <div class="row gx-5 justify-content-center">
@@ -65,20 +65,20 @@
 </section>
 
 <!-- Secciones destacadas con fondo -->
-<section class="py-5" id="resumen"
-         style="background: url('{{ url_for('static', filename='assets/fondo10.png') }}') center center / cover no-repeat;">
-    <div class="container px-5 my-5">
-        <div class="row gx-5 justify-content-center mb-5">
+<section class="py-4" id="resumen"
+         style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('{{ url_for('static', filename='assets/fondos_5.png') }}') center center / cover no-repeat;">
+    <div class="container px-5 py-4">
+        <div class="row gx-4 justify-content-center mb-4">
             <div class="col-lg-8 text-center">
-                <h2 class="fw-bolder text-white mb-4">Ingresá y conocé mis trabajos</h2>
-                <p class="fs-5 text-white">
+                <h2 class="fw-bolder text-white mb-3">Ingresá y conocé mis trabajos</h2>
+                <p class="fs-5 text-white-50 mb-0">
                     En esta sección podés navegar por mis áreas de trabajo: análisis de datos, artículos académicos, contenidos digitales y más. <br>
                     Hacé clic en cada categoría para conocer más sobre los trabajos, investigaciones o publicaciones relacionadas.
                 </p>
             </div>
         </div>
-        
-        <div class="row gx-5">
+
+        <div class="row gx-4 gy-4">
             {% set secciones = [
                 {'titulo': '📊 Análisis de datos', 'texto': 'Trabajos con Excel, Tableau, Power BI y Python. Visualizaciones, informes, dashboards.', 'url': 'trabajos'},
                 {'titulo': '📰 Cuchá', 'texto': 'Medio digital autogestionado. Estrategia de contenido, producción periodística y redes sociales.', 'url': 'cucha'},
