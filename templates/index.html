@@ -8,10 +8,11 @@
             <div class="col-lg-8">
                 <div class="text-center my-5">
                     <h1 class="display-5 fw-bolder text-white mb-3">Santiago Bonacci</h1>
-                    <h2 class="h4 text-white-50 mb-4">Consultoría estratégica en comunicación · Comunicación política, datos y estrategia digital</h2>
-                    <p class="lead text-white-50 mb-3">Profesional formado y con experiencia en comunicación digital y política. Sé escribir, editar, analizar, dirigir y explicar; ese conocimiento lo pongo en juego en cada trabajo y proyecto.</p>
-                    <p class="lead text-white-50 mb-3">Mi foco es la consultoría estratégica en comunicación: transformar datos en decisiones y decisiones en impacto, con planes claros, prioridades realistas y resultados medibles.</p>
-                    <p class="lead text-white-50 mb-4">Que la comunicación sea resultado de un plan estratégico.</p>
+                    <h2 class="h4 text-white-50 mb-4">Comunicación política, datos y estrategia digital</h2>
+                    <p class="lead text-white-50 mb-3">Profesional en comunicación digital y política, con experiencia en campañas, producción de contenidos y análisis estratégico.</p>
+                    <p class="lead text-white-50 mb-3">Mi foco es la comunicación estratégica: transformar datos en decisiones y decisiones en impacto, con planes claros, prioridades realistas y resultados medibles.</p>
+                    <p class="lead text-white-50 mb-3">Soy docente universitario, productor de contenidos, cofundador de un medio digital y comunicador digital político.</p>
+                    <p class="lead text-white-50 mb-4">Sé escribir, editar, analizar, dirigir y compartir; ese conocimiento lo pongo en juego en cada trabajo y proyecto.</p>
                     <div class="d-flex justify-content-center gap-3">
                         <a class="btn btn-primary" href="{{ url_for('render_page', page='contacto') }}#contacto">Trabajemos juntos</a>
                         <a class="btn btn-outline-light" href="{{ url_for('static', filename='docs/Currículum 2025.pdf') }}" download>Descargar CV</a>
@@ -27,39 +28,14 @@
     <div class="container px-5">
         <div class="text-center">
             <p class="lead mb-0">
-                Soy comunicador social especializado en análisis de datos y estrategia digital. Combino la experiencia en comunicación y gestión de contenidos con herramientas avanzadas de análisis aplicadas a métricas de redes sociales, <strong>SEO</strong> y reporting. Mi diferencial está en traducir datos en diagnósticos accionables que orientan la toma de decisiones estratégicas. Actualmente profundizo en <strong>SEO</strong>, <strong>visualización de datos (Looker Studio)</strong>, <strong>metodologías ágiles</strong> y <strong>aplicaciones de IA</strong> al marketing digital para consolidar un perfil híbrido entre comunicación y datos.
+                El campo de la comunicación exige <strong>actualización constante</strong>. Hoy no alcanza sólo con producir buenos contenidos: una <strong>propuesta sólida y estratégica</strong> requiere también comprender datos, audiencias y plataformas.
             </p>
-        </div>
-    </div>
-</section>
-
-<!-- Trabajos más recientes -->
-<section class="py-5">
-    <div class="container px-5">
-        <div class="text-center mb-5">
-            <h2 class="fw-bolder">Mis producciones más recientes</h2>
-        </div>
-        <div class="row gx-5">
-            {% for trabajo in trabajos_recientes %}
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ trabajo.titulo }}</h5>
-                        <p class="card-text">{{ trabajo.descripcion }}</p>
-                        {% if trabajo.endpoint %}
-                        <a href="{{ url_for(trabajo.endpoint) }}" class="btn btn-primary">Ver trabajo</a>
-                        {% elif trabajo.externo %}
-                        <a href="{{ trabajo.link }}" target="_blank" class="btn btn-primary">Ver trabajo</a>
-                        {% else %}
-                        <a href="{{ url_for('static', filename=trabajo.link) }}" target="_blank" class="btn btn-primary">Ver trabajo</a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        <div class="text-center mt-4">
-            <a href="{{ url_for('render_page', page='trabajos') }}" class="btn btn-outline-primary">Ver más</a>
+            <p class="lead mt-3 mb-0">
+                Por eso, mi desafío profesional es estar a la altura de los proyectos futuros. En ese camino estoy profundizando mi formación en <strong>SEO</strong>, <strong>análisis y visualización de datos (Looker Studio)</strong>, <strong>metodologías ágiles</strong> y <strong>aplicaciones de IA al marketing digital</strong>, para consolidar un perfil híbrido donde la comunicación siga siendo el centro, potenciada por datos y tecnología.
+            </p>
+            <p class="lead mt-3 mb-0">
+                Mi objetivo es integrar estas herramientas a mi experiencia en comunicación y gestión de contenidos para diseñar estrategias claras, medibles y orientadas a la toma de decisiones.
+            </p>
         </div>
     </div>
 </section>
@@ -69,7 +45,7 @@
     <div class="container px-5 py-4">
         <div class="row gx-4 justify-content-center mb-4">
             <div class="col-lg-8 text-center">
-                <h2 class="fw-bolder text-white mb-3">Ingresá y conocé mis trabajos</h2>
+                <h2 class="fw-bolder text-white mb-3">Conocé mis trabajos</h2>
                 <p class="fs-5 text-white-50 mb-0">
                     En esta sección podés navegar por mis áreas de trabajo: análisis de datos, artículos académicos, contenidos digitales y más. <br>
                     Hacé clic en cada categoría para conocer más sobre los trabajos, investigaciones o publicaciones relacionadas.
@@ -97,6 +73,38 @@
                 </div>
             </div>
             {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Trabajos más recientes -->
+<section class="py-5">
+    <div class="container px-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bolder">Alguno de mis informes</h2>
+            <p class="lead text-muted mb-0">Te invito a ver algunos trabajos vinculados al análisis de la comunicación basado en métricas, orientados a diagnósticos claros y accionables.</p>
+        </div>
+        <div class="row gx-5">
+            {% for trabajo in trabajos_recientes %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ trabajo.titulo }}</h5>
+                        <p class="card-text">{{ trabajo.descripcion }}</p>
+                        {% if trabajo.endpoint %}
+                        <a href="{{ url_for(trabajo.endpoint) }}" class="btn btn-primary">Ver trabajo</a>
+                        {% elif trabajo.externo %}
+                        <a href="{{ trabajo.link }}" target="_blank" class="btn btn-primary">Ver trabajo</a>
+                        {% else %}
+                        <a href="{{ url_for('static', filename=trabajo.link) }}" target="_blank" class="btn btn-primary">Ver trabajo</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('render_page', page='trabajos') }}" class="btn btn-outline-primary">Ver más</a>
         </div>
     </div>
 </section>
