@@ -39,6 +39,14 @@ BALANCE_TIKTOK_DESCRIPTION = (
 # Lista de trabajos para mostrar automáticamente los más recientes
 TRABAJOS: list[Trabajo] = [
     {
+        "titulo": "Reporte de ventas en Power BI",
+        "descripcion": "Proyecto final con reporte interactivo y modelo de datos.",
+        "link": "https://drive.google.com/file/d/1qG3JHPBuQopXvYI9t9dJHLuUqY795Cds/view",
+        "endpoint": None,
+        "externo": True,
+        "fecha": datetime(2025, 12, 15),
+    },
+    {
         "titulo": "Resumen de Informe anual de TikTok e Instagram",
         "descripcion": "Balance del período noviembre 2024 – octubre 2025 con métricas y aprendizajes clave.",
         "link": "docs/Balance anual TikTok Instagram.pdf",
