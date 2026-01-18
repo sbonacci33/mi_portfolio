@@ -43,6 +43,12 @@ body {
     color: #fff;
 }
 
+/* Botones del hero con ancho uniforme */
+.hero-cta {
+    min-width: 200px;
+    text-align: center;
+}
+
 /* Encabezados */
 h1, h2, h5 {
     font-weight: bold;
@@ -115,4 +121,3 @@ section.bg-light p.lead {
 .video-grid .ratio { margin-bottom: .25rem; }
 /* 9:16 real para Bootstrap */
 .ratio-9x16 { --bs-aspect-ratio: calc(16 / 9 * 100%); }
-
