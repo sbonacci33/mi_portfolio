@@ -39,6 +39,14 @@ BALANCE_TIKTOK_DESCRIPTION = (
 # Lista de trabajos para mostrar automáticamente los más recientes
 TRABAJOS: list[Trabajo] = [
     {
+        "titulo": "Entrega Final SQL – Coderhouse",
+        "descripcion": "Proyecto final del curso de SQL aprobado con nota 10. Diseño de base de datos relacional, consultas complejas, joins, subconsultas y vistas aplicadas a un caso real.",
+        "link": "https://drive.google.com/drive/folders/1tCSmsCo0TYI1BB0lcCeOBF3QC8jn2wBp?usp=drive_link",
+        "endpoint": None,
+        "externo": True,
+        "fecha": datetime(2026, 4, 1),
+    },
+    {
         "titulo": "Reporte de ventas en Power BI",
         "descripcion": "Proyecto final con reporte interactivo y modelo de datos.",
         "link": "https://drive.google.com/file/d/1qG3JHPBuQopXvYI9t9dJHLuUqY795Cds/view",

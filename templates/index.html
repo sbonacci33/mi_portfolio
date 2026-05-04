@@ -8,16 +8,14 @@
             <div class="col-lg-8">
                 <div class="text-center my-5">
                     <h1 class="display-4 fw-bolder text-white text-uppercase mb-3">Santiago Bonacci</h1>
-                    <h2 class="h4 text-white-50 mb-4">Analista de Datos e Información para la Gestión Pública | BI &amp; Reporting | KPIs</h2>
+                    <h2 class="h4 text-white-50 mb-4">Comunicación política · Análisis del espacio público digital · Docente-investigador UNC · Doctorando CEA-UNC</h2>
                     <div class="d-flex justify-content-center gap-3">
                         <a class="btn btn-outline-light hero-cta" href="{{ url_for('render_page', page='contacto') }}#contacto">Trabajemos juntos</a>
                         <a class="btn btn-outline-light hero-cta" href="{{ url_for('static', filename='docs/CV Saniago Bonacci Data.pdf') }}" download>Descargar CV</a>
                         <a class="btn btn-outline-light hero-cta" href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </div>
                     <p class="fs-6 text-white-50 mt-3 mb-0">
-                        Trabajo transformando <strong>datos dispersos</strong> (planillas, formularios, reportes y sistemas) en
-                        <strong>información útil para decidir</strong>: indicadores, tableros, reportes ejecutivos y automatizaciones
-                        que <strong>mejoran el seguimiento, la planificación y la rendición de cuentas</strong>.
+                        Trabajo en la intersección entre comunicación política, análisis de datos y producción de conocimiento en ciencias sociales. Investigo cómo discute política la ciudadanía en el espacio digital y qué condiciones hacen que ciertos temas escalen y adquieran centralidad política en América Latina.
                     </p>
                 </div>
             </div>
@@ -57,11 +55,11 @@
 
         <div class="row gx-4 gy-4">
             {% set secciones = [
-                {'titulo': '📊 Análisis de datos', 'texto': 'Trabajos con Excel, Tableau, Power BI y Python. Visualizaciones, informes, dashboards.', 'url': 'trabajos'},
-                {'titulo': '📰 Cuchá', 'texto': 'Medio digital autogestionado. Estrategia de contenido, producción periodística y redes sociales.', 'url': 'cucha'},
-                {'titulo': '📚 Artículos académicos', 'texto': 'Publicaciones y ponencias sobre comunicación, cultura y medios.', 'url': 'articulos'},
-                {'titulo': '🧠 Síntesis estratégica', 'texto': 'Web creada con Python para representar visualmente mi perfil profesional.', 'url': 'sintesis'},
-                {'titulo': '👤 Sobre mí', 'texto': 'Formación, experiencia y competencias técnicas como comunicador y analista de datos.', 'url': 'sobre_mi'},
+                {'titulo': '📊 Análisis de datos', 'texto': 'Tableros en Power BI y Tableau, informes de métricas, análisis de redes sociales, SQL y automatización con Python.', 'url': 'trabajos'},
+                {'titulo': '📰 Cuchá', 'texto': 'Medio digital autogestionado. Estrategia de contenido, producción periodística, métricas y análisis de audiencias.', 'url': 'cucha'},
+                {'titulo': '📚 Artículos académicos', 'texto': 'Publicaciones, ponencias y producciones en comunicación política, cultura y medios en América Latina.', 'url': 'articulos'},
+                {'titulo': '🧠 Síntesis estratégica', 'texto': 'Visualización interactiva del perfil profesional construida con Python y Flask.', 'url': 'sintesis'},
+                {'titulo': '👤 Sobre mí', 'texto': 'Trayectoria, investigación doctoral, experiencia en gestión pública y competencias técnicas.', 'url': 'sobre_mi'},
                 {'titulo': '📬 Contacto', 'texto': '¿Querés escribirme o ponerte en contacto? Encontrá mis datos y redes en esta sección.', 'url': 'contacto'}
             ] %}
             {% for item in secciones %}
@@ -119,42 +117,31 @@
             <p class="lead mb-0">Hitos que resumen mi perfil en datos para gestión pública</p>
         </div>
         <div class="row gx-5">
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100 shadow-sm"><div class="card-body">
-                    <h5 class="card-title">📊 Inteligencia de gestión y reporting para decisión</h5>
-                    <p class="card-text">Diseño productos de información (reportes ejecutivos, tableros e indicadores) para transformar datos dispersos en insumos accionables. Trabajo con definiciones claras de KPIs, seguimiento de evolución y síntesis para conducción y equipos operativos, evitando diagnósticos “bonitos” sin salida.</p>
-                </div></div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100 shadow-sm"><div class="card-body">
-                    <h5 class="card-title">🧩 Ordenamiento, integración y calidad mínima de datos</h5>
-                    <p class="card-text">Consolido información de múltiples fuentes (planillas, formularios, reportes internos, analítica digital) y construyo criterios simples de validación, versionado y consistencia, para que los datos sean usables y comparables en el tiempo. Mi foco es hacer que el dato “sirva” en gestión cotidiana.</p>
-                </div></div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100 shadow-sm"><div class="card-body">
-                    <h5 class="card-title">📈 Tableros y visualización orientados a gestión</h5>
-                    <p class="card-text">Desarrollo tableros (operativos y ejecutivos) que permiten monitorear avances, detectar desvíos y priorizar acciones. Priorizo visualizaciones claras, métricas estables y lectura rápida, para mejorar coordinación interna y toma de decisiones.</p>
-                </div></div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100 shadow-sm"><div class="card-body">
-                    <h5 class="card-title">🤖 Automatización e IA aplicada a procesos de información</h5>
-                    <p class="card-text">Uso IA (GPT) como herramienta de productividad para estandarizar reportes, documentar definiciones, acelerar análisis exploratorio y mejorar la comunicación de hallazgos. La aplico con criterio: reducir tiempos, aumentar trazabilidad y sostener rutinas de seguimiento.</p>
-                </div></div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100 shadow-sm"><div class="card-body">
-                    <h5 class="card-title">🗺️ Monitoreo territorial y enfoque en políticas públicas</h5>
-                    <p class="card-text">Me interesa especialmente el trabajo con datos en clave territorial: segmentación, comparativas, seguimiento de intervenciones y lectura de brechas. Apunto a construir sistemas graduales de monitoreo que permitan pasar de registros sueltos a inteligencia de gestión.</p>
-                </div></div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100 shadow-sm"><div class="card-body">
-                    <h5 class="card-title">🧠 Perfil híbrido: evidencia + síntesis + adopción</h5>
-                    <p class="card-text">Mi diferencial es traducir análisis a decisiones: puedo conversar con perfiles técnicos y, al mismo tiempo, convertir resultados en síntesis ejecutivas y productos comprensibles para quienes conducen y para equipos que necesitan ejecutar. Datos → decisión → seguimiento.</p>
-                </div></div>
-            </div>
+            <div class="col-lg-6 mb-4"><div class="card h-100 shadow-sm"><div class="card-body">
+                <h5 class="card-title">Investigación en comunicación política y espacio público digital</h5>
+                <p class="card-text">Doctorando en el DESAL-CEA-UNC, línea Comunicación y Cultura. Investigo cómo discute política la ciudadanía en entornos digitales y qué determina la centralidad de los temas en contextos subnacionales latinoamericanos.</p>
+            </div></div></div>
+            <div class="col-lg-6 mb-4"><div class="card h-100 shadow-sm"><div class="card-body">
+                <h5 class="card-title">Análisis de datos aplicado a comunicación y gestión</h5>
+                <p class="card-text">Diseño tableros, KPIs e informes ejecutivos que transforman datos dispersos en insumos para la toma de decisiones. Trabajo con Power BI, Tableau, Excel avanzado, Python y SQL (nota 10, Coderhouse).</p>
+            </div></div></div>
+            <div class="col-lg-6 mb-4"><div class="card h-100 shadow-sm"><div class="card-body">
+                <h5 class="card-title">Experiencia en comunicación gubernamental</h5>
+                <p class="card-text">Comunicador en el Ministerio de Vinculación y Gestión Institucional de Córdoba. Ex asesor en la Legislatura provincial. Experiencia real en comunicación de políticas públicas y gestión institucional.</p>
+            </div></div></div>
+            <div class="col-lg-6 mb-4"><div class="card h-100 shadow-sm"><div class="card-body">
+                <h5 class="card-title">Docencia e investigación universitaria</h5>
+                <p class="card-text">Docente en la cátedra de Teorías Sociológicas de la Licenciatura en Comunicación Social (UNC). Formación en ciencias sociales que da contexto, síntesis y sentido político al análisis de datos.</p>
+            </div></div></div>
+            <div class="col-lg-6 mb-4"><div class="card h-100 shadow-sm"><div class="card-body">
+                <h5 class="card-title">Producción periodística y medios digitales</h5>
+                <p class="card-text">Coordinador de Cuchá, medio digital autogestionado. Estrategia de contenido, análisis de métricas, cobertura periodística y construcción de audiencias en redes sociales.</p>
+            </div></div></div>
+            <div class="col-lg-6 mb-4"><div class="card h-100 shadow-sm"><div class="card-body">
+                <h5 class="card-title">Perfil híbrido con proyección regional</h5>
+                <p class="card-text">Combino rigor académico, experiencia en gestión pública y capacidad técnica en datos. Busco vincularme con consultoras de opinión pública, organismos y proyectos de comunicación política en América Latina.</p>
+            </div></div></div>
+        </div>
         </div>
     </div>
 </section>
